@@ -68,9 +68,26 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 
 
 ## ATP
+TEST CASE 1: Player Movement 
+Test Description: Verify that the player can move left, right and up.
+Test Steps:
+1. Start the game
+2. Press the left key
+3. Verify the player moves left
+4. Press the right key
+5. Verify the player moves right
+6. Press the Up key
+7. Verify the player moves up
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+TEST CASE 2: Collision detected
+Test Description: Ensure that collisions between the player's bullets and enemy ships are detected correctly.
+Test Steps:
+1.Start the game.
+2.Fire the apple towards the prince
+3.Verify that the apple hits the prince
+4.Fire a player's apple that misses the prince
+Verify that no collision is detected.
+
+TEST CASE 3: Menu Navigation 
+Test Description: Test the navigation through the game's menu 
+Test Steps:
