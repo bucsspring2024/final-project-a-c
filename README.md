@@ -2,18 +2,19 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
-## CS110 Final Project  << Semester, Year >>
+# 
+## CS110 Final Project   Spring, 2024 
 
 ## Team Members
 
-<< List team member names >>
+Carol Zhang
+Ashley Mera
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+For this project, there will be a girl in a tower that needs to be saved. Your character is supposed to save the girl but there is a evil witch at the top of the tower with the girl.Your objective is to save the girl by climbing the tower while apples are being thrown at you by the witch and getting to the top of the tower.
 
 ***    
 
