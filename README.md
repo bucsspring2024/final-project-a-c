@@ -2,18 +2,18 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
+# Tower Rescue: Dodge the Witch's Apples
 ## CS110 Final Project  << Semester, Year >>
 
 ## Team Members
 
-<< List team member names >>
+Carol Zhang and Ashley Mera
 
-***
+*** 
 
 ## Project Description
 
-<< Give an overview of your project >>
+There is a girl at the tower that needs to be saved and the player must get up to the tower without being hit by apples by the evil witch. 
 
 ***    
 
@@ -31,11 +31,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. "Press start to win
+2. Prince
+3. The witch with her apples
+4. Tower moving with clouds
+5. "Congrats you saved her"
 
 ### Classes
 
