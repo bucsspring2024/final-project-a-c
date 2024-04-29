@@ -1,8 +1,18 @@
-class Character:
-    def __init__(self, x, y, img_file):
+import pygame
+
+class Character(pygame.sprite.Sprite):
+    def __init__(self, x, y, scale, img_file):
+        pygame.sprite.Sprite.__init__(self)
         self.x = x
         self.y = y
         self.img_file = img_file
+        self.image= pygame.image.load(img_file)
+        self.image=pygame.transform.scale_by(self.image, scale)
+        self.rect=self.image.get_rect()
+
+    def update(self):
+        self.rect.x=self.x
+        self.rect.y=self.y
 
     def move_up(self):
         self.y -= 1
