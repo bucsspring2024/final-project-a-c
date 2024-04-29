@@ -30,6 +30,12 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 
 ## Program Design
 
+Character class: represents the main characters and the character can move in various directions and perform actions like jumping 
+Tower class: represents the tower and checks for collisions with the character to determine if the character has reached the top 
+Witch class: the witch can throw apples at the character
+Apple class: represents the apples thrown and the apples move downward and can collide with the character
+Controller class: manages game loop and events and control the flow of the game
+
 ### Features
 
 1.  press start menu
@@ -40,7 +46,7 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+
 
 ## ATP
 
