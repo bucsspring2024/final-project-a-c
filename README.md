@@ -42,38 +42,27 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 
 ## Program Design
 
-Character class: represents the main characters and the character can move in various directions and perform actions like jumping 
-Tower class: represents the tower and checks for collisions with the character to determine if the character has reached the top 
-Witch class: the witch can throw apples at the character
-Apple class: represents the apples thrown and the apples move downward and can collide with the character
-Controller class: manages game loop and events and control the flow of the game
-
 ### Features
 
-<<<<<<< HEAD
+
 1. "Press start to win
 2. Prince
 3. The witch with her apples
 4. Tower moving with clouds
 5. "Congrats you saved her"
 =======
-1.  press start menu
-2.  prince character
-3.  Witch with apples
-4.  Tower moving with clouds
-5.  Congratulations ending screen
->>>>>>> 91c5c063d48bd00b93de46207dc3b77a5dd33519
 
 ### Classes
+Character class: represents the main characters and the character can move in various directions and perform actions like jumping 
+Tower class: represents the tower and checks for collisions with the character to determine if the character has reached the top 
+Witch class: the witch can throw apples at the character
+Apple class: represents the apples thrown and the apples move downward and can 
 
-<<<<<<< HEAD
-=======
 - Character Class: Represents the main character of the game, tasked with saving the girl from the tower. The character can move in various directions and perform actions like jumping.
 - Tower Class: Represents the tower where the girl is held captive. It checks for collisions with the character to determine if the character has reached the top of the tower.
 -Witch Class: Represents the evil witch at the top of the tower. The witch can throw apples at the character.
 -Apple Class: Represents the apples thrown by the witch. The apples move downward and can collide with the character.
 - Controller Class: Manages the game loop, handles events, updates game logic, and controls the flow of the game.
->>>>>>> 560fa4224a2472e7c4739fe3b25ce59a9aa0303b
 
 
 ## ATP
