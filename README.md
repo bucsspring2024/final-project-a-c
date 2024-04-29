@@ -2,7 +2,7 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# 
+# Tower Rescue: Dodge the Witch's Apples
 ## CS110 Final Project   Spring, 2024 
 
 ## Team Members
@@ -32,11 +32,11 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1.  press start menu
+2.  prince character
+3.  Witch with apples
+4.  Tower moving with clouds
+5.  Congratulations ending screen
 
 ### Classes
 
