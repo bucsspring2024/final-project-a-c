@@ -3,30 +3,18 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
 # Tower Rescue: Dodge the Witch's Apples
-<<<<<<< HEAD
-## CS110 Final Project  << Semester, Year >>
-
-## Team Members
-
-Carol Zhang and Ashley Mera
-=======
 ## CS110 Final Project   Spring, 2024 
 
 ## Team Members
 
 Carol Zhang
 Ashley Mera
->>>>>>> 91c5c063d48bd00b93de46207dc3b77a5dd33519
 
 *** 
 
 ## Project Description
 
-<<<<<<< HEAD
-There is a girl at the tower that needs to be saved and the player must get up to the tower without being hit by apples by the evil witch. 
-=======
 For this project, there will be a girl in a tower that needs to be saved. Your character is supposed to save the girl but there is a evil witch at the top of the tower with the girl.Your objective is to save the girl by climbing the tower while apples are being thrown at you by the witch and getting to the top of the tower.
->>>>>>> 91c5c063d48bd00b93de46207dc3b77a5dd33519
 
 ***    
 
@@ -43,12 +31,10 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 ## Program Design
 
 ### Features
-
-
-1. "Press start to win
-2. Prince
-3. The witch with her apples
-4. Tower moving with clouds
+1. "Press start"
+2. Moving character
+3. Witch with her apples
+4. Tower background
 5. "Congrats you saved her"
 =======
 
