@@ -37,7 +37,10 @@ class Controller:
                  prince.move_right()
             if key[pygame.K_UP]:
                 prince.move_up()
-            
+            if key[pygame.K_A]
+                witch.move_left()
+            if key[pygame.K_D]
+                witch.move.right()
             
             #prince.move_up()  # Example movement, adjust as needed
             apple.move()  # Example apple movement, adjust as needed
@@ -48,11 +51,13 @@ class Controller:
                 pass
             
             charactergroup.update()
+            witchgroup.update()
 
             # Draw everything
             screen.fill((255, 255, 255))  # White background
             # Draw characters, tower, apples, etc.
             charactergroup.draw(screen)
+            witchgroup.draw(screen)
             
             pygame.display.flip()
             clock.tick(60)  # Limit to 60 FPS
