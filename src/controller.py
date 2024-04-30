@@ -14,12 +14,13 @@ class Controller:
         clock = pygame.time.Clock()
 
         prince = Character(100, 400, .25, 'assets/prince.png')
-        tower = Tower(300, 200, 'assets/tower.png')
-        witch = Witch(350, 150, 'assets/witch.png')
+        tower = Tower(300, 50 , .55, 'assets/tower.png')
+        witch = Witch(100, 20, .02,'assets/witch.png')
         apple = Apple(350, 180, 'assets/apple.png')
         charactergroup= pygame.sprite.Group(prince)
         witchgroup= pygame.sprite.Group(witch)
-        applegroup=pygame.sprite.Group(apple)
+        towergroup= pygame.sprite.Group(tower)
+       
         
         running = True
         while running:
@@ -37,25 +38,26 @@ class Controller:
                  prince.move_right()
             if key[pygame.K_UP]:
                 prince.move_up()
-            if key[pygame.K_A]
+            if key[pygame.K_1]:
                 witch.move_left()
-            if key[pygame.K_D]
-                witch.move.right()
+            if key[pygame.K_2]:
+                witch.move_right()
             
             #prince.move_up()  # Example movement, adjust as needed
             apple.move()  # Example apple movement, adjust as needed
 
             # Check collisions
-            if tower.check_collision(prince):
+            #if tower.check_collision(prince):
                 # Handle collision logic
-                pass
+            pass
             
             charactergroup.update()
             witchgroup.update()
-
+            towergroup.update()
             # Draw everything
-            screen.fill((255, 255, 255))  # White background
+            screen.fill((" sky blue"))  # White background
             # Draw characters, tower, apples, etc.
+            towergroup.draw(screen)
             charactergroup.draw(screen)
             witchgroup.draw(screen)
             

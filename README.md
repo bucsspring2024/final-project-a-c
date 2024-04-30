@@ -52,26 +52,60 @@ Apple class: represents the apples thrown and the apples move downward and can
 
 
 ## ATP
-TEST CASE 1: Player Movement 
+
+TEST CASE 1: Player Movement for the Prince
 Test Description: Verify that the player can move left, right and up.
 Test Steps:
 1. Start the game
-2. Press the left key
+2. Press the left arrow key on keyboard
 3. Verify the player moves left
-4. Press the right key
+4. Press the right key arrow key on keyboard
 5. Verify the player moves right
-6. Press the Up key
+6. Press the Up key arrow key on keyboard
 7. Verify the player moves up
+Expected Outcome: The player should move left, right or up using keyboard keys.
 
-TEST CASE 2: Collision detected
-Test Description: Ensure that collisions between the player's bullets and enemy ships are detected correctly.
+TEST CASE 2: Player Movement for the Witch
+Test Description: Verify that the player can move left, right and up.
+Test Steps:
+1. Start the game
+2. Press "1" on keyboard to move left
+3. Verify the player moves left
+4. Press "2" on keyboard
+5. Verify the player moves right
+Expected Outcome: The player should move left, right or up using keyboard keys.
+
+
+TEST CASE 3: Collision detected
+Test Description: Ensure that collisions between the enemies's apples are detected correctly. You are playing the witch (Keys for witch are 1 and 2, check test case 2 for verification)
 Test Steps:
 1.Start the game.
-2.Fire the apple towards the prince
-3.Verify that the apple hits the prince
+2.Move keys and aim to hit the Prince
+3.Verify that the apple hits the prince. It will say "Game Over"
 4.Fire a player's apple that misses the prince
-Verify that no collision is detected.
+5. Verify that no collision is detected. The prince will win
+Expected Outcome: Apples should correctly collide with Prince and end game
 
-TEST CASE 3: Menu Navigation 
+
+
+TEST CASE 4: Menu Navigation 
 Test Description: Test the navigation through the game's menu 
 Test Steps:
+1. Start the Game
+2. Check to see if a menu appears
+3. Click "Begin Game"
+4. Verify that game begins
+5. Click "Quit" on menu
+5. Verify that game ends
+Expected Outcome: The main menu should allow the player to navigate through options and select them.
+
+TEST CASE 5: Game Over Condition
+1. Start the game
+2. Play the game
+3. Get hit by the apple
+4. Verify that game displays "Game Over"
+5. Click "Try again"
+6. Verify you can play again
+7. Click "Quit" 
+8. Verify game ends
+Expected Outcome: The game should display a "Game Over" message when the player loses and you should get the option to play again or quit.
