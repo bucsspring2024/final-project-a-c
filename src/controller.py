@@ -38,6 +38,8 @@ class Controller:
                  prince.move_right()
             if key[pygame.K_UP]:
                 prince.move_up()
+            if key[pygame.K_DOWN]:
+                prince.move_down()
             if key[pygame.K_1]:
                 witch.move_left()
             if key[pygame.K_2]:
