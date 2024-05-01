@@ -68,7 +68,7 @@ class Witch(pygame.sprite.Sprite):
 
 
     def throw_apple(self):
-        # Logic to throw apple at the character
+        # throw apple at the character
         pass
     def update(self):
         self.rect.x=self.x
@@ -88,3 +88,21 @@ class Apple:
 
     def move(self):
         self.y += 1
+
+class StartButton(pygame.sprite.Sprite):
+    def __init__(self, x, y, scale, img_file):
+        pygame.sprite.Sprite.__init__(self)
+        self.x = x
+        self.y = y
+        self.img_file = img_file
+        self.image = pygame.image.load(img_file)
+        self.image = pygame.transform.scale_by(self.image, scale)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+    def draw(self, screen):
+        screen.blit(self.image, self.rect)
+
+    def is_clicked(self, mouse_pos):
+        return self.rect.collidepoint(mouse_pos)

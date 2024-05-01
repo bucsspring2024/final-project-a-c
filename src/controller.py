@@ -3,11 +3,13 @@ from src.game import Character
 from src.game import Tower
 from src.game import Witch
 from src.game import Apple
+from src.game import StartButton
 
 class Controller:
     def __init__(self):
         pygame.init()
-        # Initialize other resources and objects needed for your game
+        self.start_button = StartButton(200, 100, .50, 'assets/startgame.png')
+        #self.start_button_visible = True
 
     def mainloop(self):
         screen = pygame.display.set_mode((800, 600))
@@ -20,9 +22,11 @@ class Controller:
         charactergroup= pygame.sprite.Group(prince)
         witchgroup= pygame.sprite.Group(witch)
         towergroup= pygame.sprite.Group(tower)
+        startbuttongroup = pygame.sprite.Group(self.start_button)
        
         
         running = True
+        start_game = False
         while running:
             for event in pygame.event.get():
                 
@@ -30,7 +34,13 @@ class Controller:
                 if event.type == pygame.QUIT:
 
                     running = False
+                elif event.type == pygame.MOUSEBUTTONDOWN and not start_game:
+                   if self.start_button.rect.collidepoint(event.pos):
+                    start_game = True
+                    startbuttongroup.empty()
+                
 
+        if start_game:
             key=pygame.key.get_pressed()
             if key[pygame.K_LEFT]:
                  prince.move_left()
@@ -53,6 +63,7 @@ class Controller:
                 # Handle collision logic
             pass
             
+        
             charactergroup.update()
             witchgroup.update()
             towergroup.update()
@@ -62,9 +73,12 @@ class Controller:
             towergroup.draw(screen)
             charactergroup.draw(screen)
             witchgroup.draw(screen)
+        else:
+                
+            startbuttongroup.draw(screen)
             
-            pygame.display.flip()
-            clock.tick(60)  # Limit to 60 FPS
+        pygame.display.flip()
+        clock.tick(60)  
         
         pygame.quit()
 
