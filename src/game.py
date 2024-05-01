@@ -85,6 +85,8 @@ class Apple:
         self.x = x
         self.y = y
         self.img_file = img_file
+        self.rect.x=x
+        self.rect.y=y
 
     def move(self):
         self.y += 1
