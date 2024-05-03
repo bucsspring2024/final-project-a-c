@@ -32,10 +32,10 @@ For this project, there will be a girl in a tower that needs to be saved. Your c
 
 ### Features
 1. "Press start"
-2. Moving character
-3. Witch with her apples
+2. Moving characters
+3. Witch with her apple
 4. Tower background
-5. "Congrats you saved her"
+5. "You win!"
 =======
 
 ### Classes
