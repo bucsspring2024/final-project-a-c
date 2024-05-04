@@ -7,11 +7,14 @@ from src.game import Apple
 class Controller:
     def __init__(self):
         pygame.init()
-        # Initialize other resources and objects needed for your game
+        self.in_start_menu = True 
 
     def mainloop(self):
         screen = pygame.display.set_mode((800, 600))
         clock = pygame.time.Clock()
+
+        menu_image = pygame.image.load('assets/startgame.png')
+        menu_rect = menu_image.get_rect()
 
         prince = Character(100, 400, .25, 'assets/prince.png')
         tower = Tower(300, 50 , .55, 'assets/tower.png')
@@ -22,8 +25,10 @@ class Controller:
         towergroup= pygame.sprite.Group(tower)
        
         
+
+        
         running = True
-        while running:
+        while running: 
             for event in pygame.event.get():
                 
 

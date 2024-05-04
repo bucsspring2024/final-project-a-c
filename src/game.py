@@ -90,3 +90,33 @@ class Apple:
 
     def move(self):
         self.y += 1
+
+class StartMenu:
+    def __init__(self, screen, image_path):
+        self.screen = screen
+        self.image = pygame.image.load(image_path)
+        self.image_rect = self.image.get_rect(center=(screen.get_width() // 2, screen.get_height() // 2))
+        self.rect.x=x
+        self.rect.y=y
+        
+
+    def display_menu(self):
+        self.screen.blit(self.image, self.image_rect)
+
+    def handle_events(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                return True  
+
+    def run(self):
+        while True:
+            self.screen.fill((0, 0, 0))
+            self.display_menu()
+            pygame.display.flip()
+
+            start_game = self.handle_events()
+            if start_game:
+                break
