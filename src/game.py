@@ -1,4 +1,5 @@
 import pygame
+import json
 
 class Character(pygame.sprite.Sprite):
     def __init__(self, x, y, scale, img_file):
@@ -158,7 +159,7 @@ class Rapunzel(pygame.sprite.Sprite):
     def update(self):
         self.rect.x=self.x
         self.rect.y=self.y
-        
+
     def check_collision(self, character):
         if (character.x >= self.x and character.x <= self.x + 100) and \
             (character.y >= self.y and character.y <= self.y + 200):
@@ -180,5 +181,26 @@ class Cloud(pygame.sprite.Sprite):
     def update(self):
         self.rect.x=self.x
         self.rect.y=self.y
+
+class Highscore:
+    def __init__(self):
+            self.filename = "assets/highscore.json"
+
+    def getscore(self):
+        try: 
+            with open(self.filename, "r") as file:
+                data=json.load(file)
+                return data["topscore"]
+        except FileNotFoundError:
+            return 0
+        
+    def setscore(self, score):
+            data = {"topscore":score}
+            with open(self.filename, "w") as file: 
+                json.dump(data,file)
+
+
+
+        
     
 
