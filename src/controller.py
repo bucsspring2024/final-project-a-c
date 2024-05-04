@@ -6,6 +6,9 @@ from src.game import Witch
 from src.game import StartButton
 from src.game import Rapunzel
 from src.game import Apple
+from src.game import Cloud
+
+
 #from src.game import RetryButton
 
 
@@ -40,6 +43,7 @@ class Controller:
         screen = pygame.display.set_mode((800, 600))
         clock = pygame.time.Clock()
 
+        cloud = Cloud(50, 150 , .90, 'assets/clouds.png')
         prince = Character(100, 400, .25, 'assets/prince.png')
         tower = Tower(300, 50 , .55, 'assets/tower.png')
         witch = Witch(100, 20, .02,'assets/witch.png', )
@@ -52,6 +56,7 @@ class Controller:
         startbuttongroup = pygame.sprite.Group(self.start_button)
         rapunzelgroup = pygame.sprite.Group(rapunzel)
         apple_group = pygame.sprite.Group(apple)
+        cloud_group = pygame.sprite.Group(cloud)
         
        
         
@@ -117,14 +122,17 @@ class Controller:
                 startbuttongroup.update()
                 rapunzelgroup.update()
                 apple_group.update()
+                cloud_group.update()
                 # Draw everything
                 screen.fill((" sky blue"))  # White background
                 # Draw characters, tower, apples, etc.
+                cloud_group.draw(screen)
                 towergroup.draw(screen)
                 charactergroup.draw(screen)
                 witchgroup.draw(screen)
                 rapunzelgroup.draw(screen)
                 apple_group.draw(screen)
+
 
 
                 if pygame.sprite.collide_rect(prince, apple):
