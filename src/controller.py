@@ -6,16 +6,18 @@ from src.game import Witch
 from src.game import StartButton
 from src.game import Rapunzel
 from src.game import Apple
+#from src.game import RetryButton
+
 
 class Controller:
     def __init__(self):
         pygame.init()
         self.start_button = StartButton(300, 150, .60, 'assets/startgame.png')
+        self.retry_button = StartButton(400, 400, .60, 'assets/retry.png')  # Add retry button THIS IS NEW, DELETE IF DONT WORK
         self.start_button_visible = True
         self.clock = pygame.time.Clock()
-        #self.apple_timer = pygame.USEREVENT + 1
-        #pygame.time.set_timer(self.apple_timer, 1000)  # Timer event every 1000 milliseconds (1 second)
         self.game_over = False
+
 
         self.you_win_image = pygame.image.load('assets/youwin.png')
         self.you_win_rect = self.you_win_image.get_rect()
@@ -25,11 +27,16 @@ class Controller:
         self.game_over_rect = self.game_over_image.get_rect()
         self.game_over_rect.center = (400, 300)
 
+        self.retry_image = pygame.image.load('assets/retry.png')
+        self.retry_rect = self.retry_image.get_rect()
+        self.retry_rect.center = (400, 300)
+
         
 
 
 
     def mainloop(self):
+
         screen = pygame.display.set_mode((800, 600))
         clock = pygame.time.Clock()
 
@@ -60,13 +67,10 @@ class Controller:
                    if self.start_button.rect.collidepoint(event.pos):
                     start_game = True
                     startbuttongroup.empty()
-                
-                #elif event.type == self.apple_timer and start_game:
-                    #new_apple = Apple(100, 50, .005, 'assets/apple.png')  # Create a new apple
-                    #apple_group.add(new_apple)
-                
-                #if event.type == self.apple_timer and start_game:  # Apple falling timer event
-                    #apple.move_down()
+
+                elif event.type == pygame.MOUSEBUTTONDOWN and self.game_over:
+                    if self.retry_button.rect.collidepoint(event.pos):  # Check for retry button click NEW STUFFY
+                        self.reset_game()
                 
 
             if start_game :
@@ -122,6 +126,7 @@ class Controller:
                 rapunzelgroup.draw(screen)
                 apple_group.draw(screen)
 
+
                 if pygame.sprite.collide_rect(prince, apple):
                     screen.blit(self.game_over_image, self.game_over_rect)
                     pygame.display.flip()
@@ -133,6 +138,15 @@ class Controller:
                     pygame.display.flip()
                     pygame.time.delay(3000)  # Display for 3 seconds before quitting
                     running = False
+
+            #THIS IS NEW STUFF     
+                if pygame.sprite.collide_rect(prince, apple) or pygame.sprite.collide_rect(prince, rapunzel):
+                    screen.blit(self.retry_image, self.retry_rect)
+                    pygame.display.flip()
+                    pygame.time.delay(3000)  # Display for 3 seconds before quitting
+                    running = False
+
+                    
 
 
             #if pygame.sprite.spritecollide(prince, apple_group, True):
