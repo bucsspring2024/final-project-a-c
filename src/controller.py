@@ -72,6 +72,25 @@ class Controller:
         RETRY=2
 
 
+        cloud = Cloud(50, 150 , .90, 'assets/clouds.png')
+        prince = Character(100, 400, .25, 'assets/prince.png')
+        tower = Tower(300, 50 , .55, 'assets/tower.png')
+        witch = Witch(100, 20, .02,'assets/witch.png', )
+        apple = Apple(100, 50, .005,  'assets/apple.png')
+        rapunzel = Rapunzel (350, 150 , .30, 'assets/rapunzel.png')
+
+        charactergroup= pygame.sprite.Group(prince)
+        witchgroup= pygame.sprite.Group(witch)
+        towergroup= pygame.sprite.Group(tower)
+        startbuttongroup = pygame.sprite.Group(self.start_button)
+        rapunzelgroup = pygame.sprite.Group(rapunzel)
+        apple_group = pygame.sprite.Group(apple)
+        cloud_group = pygame.sprite.Group(cloud)
+        
+       
+        
+
+        
         running = True
         start_game = INTRO
         game_over= False
